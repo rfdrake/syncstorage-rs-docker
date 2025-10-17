@@ -24,8 +24,8 @@ jobs:
       - name: Get latest release from external repo
         id: latest
         uses: actions/github-script@v7
-        debug: true
         with:
+          debug: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const owner = process.env.EXTERNAL_OWNER;
