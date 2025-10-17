@@ -58,7 +58,7 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: chore: update ${{ env.EXTERNAL_OWNER}}/${{ env.EXTERNAL_REPO}} to ${{ steps.latest.outputs.tag }}
+          commit-message: "chore: update ${{ env.EXTERNAL_OWNER}}/${{ env.EXTERNAL_REPO}} to ${{ steps.latest.outputs.tag }}"
           title: "Update ${{ env.EXTERNAL_OWNER}}/${{ env.EXTERNAL_REPO}} to ${{ steps.latest.outputs.tag }}"
           body: |
             Detected new release of ${{ env.EXTERNAL_OWNER}}/${{ env.EXTERNAL_REPO}}: ${{ steps.latest.outputs.tag }}
