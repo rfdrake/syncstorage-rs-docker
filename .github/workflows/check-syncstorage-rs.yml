@@ -32,6 +32,7 @@ jobs:
             try {
               const r = await github.rest.repos.getLatestRelease({ owner, repo });
               core.setOutput('tag', r.data.tag_name);
+              core.setOutput('url', r.data.html_url);
             } catch (err) {
               console.log("No valid release data found.");
               core.setOutput('tag', '');
